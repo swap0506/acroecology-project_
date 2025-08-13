@@ -9,6 +9,10 @@ import TranslucentHeader from './components/TranslucentHeader';
 import GreenFooter from './components/GreenFooter';
 import HomePageHeader from './components/HomePageHeader';
 
+
+{/* <Route path="/crop-recommendation" element={<CropRecommendation />} /> */}
+
+
 interface CropData {
   rainfall: string;
   temperature: string;
