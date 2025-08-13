@@ -6,6 +6,10 @@ import Dashboard from './components/Dashboard';
 import Analytics from './components/Analytics';
 import SettingsPage from './components/Settings';
 
+
+{/* <Route path="/crop-recommendation" element={<CropRecommendation />} /> */}
+
+
 interface CropData {
   rainfall: string;
   temperature: string;
