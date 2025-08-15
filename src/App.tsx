@@ -342,14 +342,14 @@ const App = () => {
     setIsTransitioning(false);
   };
 
-  const handleLogin = (email: string, _password: string) => {
+  const handleLogin = (email: string, password: string) => {
     // Simple login simulation - in real app, this would call an API
     const userData = { name: email.split('@')[0], email };
     setUser(userData);
     localStorage.setItem('cropVisionUser', JSON.stringify(userData));
   };
 
-  const handleSignup = (name: string, email: string, _password: string) => {
+  const handleSignup = (name: string, email: string, password: string) => {
     // Simple signup simulation - in real app, this would call an API
     const userData = { name, email };
     setUser(userData);
