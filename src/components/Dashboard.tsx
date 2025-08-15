@@ -1,12 +1,13 @@
 import React from 'react';
-import { TrendingUp, Leaf, Droplets, Sun, Calendar, MapPin, Award, Target } from 'lucide-react';
+import { TrendingUp, Leaf, Droplets, Sun, Calendar, MapPin, Award, Target, Bug } from 'lucide-react';
 
 interface DashboardProps {
   user: { name: string; email: string } | null;
   predictionCount: number;
+  onNavigate?: (page: string) => void;
 }
 
-const Dashboard: React.FC<DashboardProps> = ({ user, predictionCount }) => {
+const Dashboard: React.FC<DashboardProps> = ({ user, predictionCount, onNavigate }) => {
   const recentPredictions = [
     { crop: 'Rice', confidence: 92, date: '2025-01-15', location: 'Field A' },
     { crop: 'Wheat', confidence: 88, date: '2025-01-14', location: 'Field B' },
@@ -160,14 +161,30 @@ const Dashboard: React.FC<DashboardProps> = ({ user, predictionCount }) => {
               </div>
               <div className="p-6">
                 <div className="space-y-3">
-                  <button className="w-full bg-green-500 hover:bg-green-600 text-white py-3 px-4 rounded-lg font-medium transition-colors">
+                  <button 
+                    onClick={() => onNavigate?.('prediction')}
+                    className="w-full bg-green-500 hover:bg-green-600 text-white py-3 px-4 rounded-lg font-medium transition-colors"
+                  >
                     New Prediction
                   </button>
-                  <button className="w-full bg-blue-500 hover:bg-blue-600 text-white py-3 px-4 rounded-lg font-medium transition-colors">
+                  <button 
+                    onClick={() => onNavigate?.('pest-identification')}
+                    className="w-full bg-orange-500 hover:bg-orange-600 text-white py-3 px-4 rounded-lg font-medium transition-colors flex items-center justify-center space-x-2"
+                  >
+                    <Bug size={18} />
+                    <span>Identify Pests</span>
+                  </button>
+                  <button 
+                    onClick={() => onNavigate?.('analytics')}
+                    className="w-full bg-blue-500 hover:bg-blue-600 text-white py-3 px-4 rounded-lg font-medium transition-colors"
+                  >
                     View Analytics
                   </button>
-                  <button className="w-full bg-purple-500 hover:bg-purple-600 text-white py-3 px-4 rounded-lg font-medium transition-colors">
-                    Export Data
+                  <button 
+                    onClick={() => onNavigate?.('settings')}
+                    className="w-full bg-purple-500 hover:bg-purple-600 text-white py-3 px-4 rounded-lg font-medium transition-colors"
+                  >
+                    Settings
                   </button>
                 </div>
               </div>

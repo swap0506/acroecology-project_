@@ -3,9 +3,10 @@ import { BarChart3, PieChart, TrendingUp, Calendar, Download, Filter } from 'luc
 
 interface AnalyticsProps {
   predictionCount: number;
+  onNavigate?: (page: string) => void;
 }
 
-const Analytics: React.FC<AnalyticsProps> = ({ predictionCount }) => {
+const Analytics: React.FC<AnalyticsProps> = ({ predictionCount, onNavigate }) => {
   const cropDistribution = [
     { crop: 'Rice', count: 45, percentage: 35, color: 'bg-green-500' },
     { crop: 'Wheat', count: 32, percentage: 25, color: 'bg-yellow-500' },
