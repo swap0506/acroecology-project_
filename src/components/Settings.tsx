@@ -4,9 +4,10 @@ import { User, Bell, Shield, Globe, Palette, Database, Download, Trash2, Save } 
 interface SettingsProps {
   user: { name: string; email: string } | null;
   onUpdateUser: (userData: { name: string; email: string }) => void;
+  onNavigate?: (page: string) => void;
 }
 
-const Settings: React.FC<SettingsProps> = ({ user, onUpdateUser }) => {
+const Settings: React.FC<SettingsProps> = ({ user, onUpdateUser, onNavigate }) => {
   const [activeTab, setActiveTab] = useState('profile');
   const [formData, setFormData] = useState({
     name: user?.name || '',

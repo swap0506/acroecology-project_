@@ -1,0 +1,288 @@
+{
+  "soil_types": {
+    "sandy": {
+      "name": "Sandy",
+      "characteristics": [
+        "Large particles with excellent drainage",
+        "Low water retention capacity",
+        "Quick to warm up in spring",
+        "Easy to work with and cultivate",
+        "Good aeration for root development"
+      ],
+      "water_retention": "low",
+      "drainage": "excellent",
+      "suitable_crops": [
+        "carrots", "radishes", "potatoes", "sweet potatoes", "herbs", 
+        "asparagus", "strawberries", "grapes", "citrus fruits"
+      ],
+      "amendments": [
+        {
+          "name": "Organic compost",
+          "purpose": "Improve water retention and add nutrients",
+          "application_rate": "2-4 inches annually",
+          "timing": "Spring before planting"
+        },
+        {
+          "name": "Peat moss",
+          "purpose": "Increase water holding capacity",
+          "application_rate": "1-2 inches mixed into top 6 inches",
+          "timing": "Before planting season"
+        },
+        {
+          "name": "Well-aged manure",
+          "purpose": "Add organic matter and slow-release nutrients",
+          "application_rate": "2-3 inches annually",
+          "timing": "Fall or early spring"
+        }
+      ],
+      "irrigation_guidance": {
+        "frequency": "More frequent watering needed (daily in hot weather)",
+        "duration": "Shorter duration sessions (15-20 minutes)",
+        "method": "Drip irrigation or soaker hoses preferred",
+        "special_notes": "Water deeply but frequently to prevent nutrient leaching. Mulch heavily to retain moisture."
+      }
+    },
+    "clay": {
+      "name": "Clay",
+      "characteristics": [
+        "Small particles that retain water well",
+        "High water retention capacity",
+        "Slow to drain and can become waterlogged",
+        "Rich in nutrients but can be hard to work",
+        "Slow to warm up in spring"
+      ],
+      "water_retention": "high",
+      "drainage": "poor",
+      "suitable_crops": [
+        "rice", "wheat", "corn", "soybeans", "cabbage", "broccoli", 
+        "lettuce", "spinach", "fruit trees", "roses"
+      ],
+      "amendments": [
+        {
+          "name": "Coarse sand",
+          "purpose": "Improve drainage and soil structure",
+          "application_rate": "2-3 inches mixed into top 8 inches",
+          "timing": "Fall preparation"
+        },
+        {
+          "name": "Organic compost",
+          "purpose": "Improve soil structure and drainage",
+          "application_rate": "3-4 inches annually",
+          "timing": "Fall or early spring"
+        },
+        {
+          "name": "Gypsum",
+          "purpose": "Improve soil structure without changing pH",
+          "application_rate": "1-2 pounds per 100 sq ft",
+          "timing": "Fall application preferred"
+        }
+      ],
+      "irrigation_guidance": {
+        "frequency": "Less frequent, deep watering (2-3 times per week)",
+        "duration": "Longer duration sessions (30-45 minutes)",
+        "method": "Avoid overhead watering, use drip or soaker hoses",
+        "special_notes": "Allow soil to dry slightly between waterings. Avoid working soil when wet to prevent compaction."
+      }
+    },
+    "loamy": {
+      "name": "Loamy",
+      "characteristics": [
+        "Ideal balance of sand, silt, and clay",
+        "Excellent water retention and drainage",
+        "Rich in organic matter and nutrients",
+        "Easy to work with in most conditions",
+        "Supports diverse plant growth"
+      ],
+      "water_retention": "medium",
+      "drainage": "good",
+      "suitable_crops": [
+        "tomatoes", "peppers", "beans", "peas", "squash", "cucumbers",
+        "most vegetables", "flowers", "fruit trees", "berries"
+      ],
+      "amendments": [
+        {
+          "name": "Organic compost",
+          "purpose": "Maintain soil health and fertility",
+          "application_rate": "1-2 inches annually",
+          "timing": "Spring or fall"
+        },
+        {
+          "name": "Aged manure",
+          "purpose": "Add nutrients and maintain organic matter",
+          "application_rate": "1-2 inches annually",
+          "timing": "Fall application preferred"
+        }
+      ],
+      "irrigation_guidance": {
+        "frequency": "Regular watering as needed (2-3 times per week)",
+        "duration": "Medium duration sessions (20-30 minutes)",
+        "method": "Any irrigation method works well",
+        "special_notes": "Monitor soil moisture and adjust watering based on weather and plant needs."
+      }
+    },
+    "silty": {
+      "name": "Silty",
+      "characteristics": [
+        "Fine particles that hold water and nutrients well",
+        "Good water retention but can become compacted",
+        "Fertile and rich in nutrients",
+        "Can be prone to erosion when wet",
+        "Smooth, flour-like texture when dry"
+      ],
+      "water_retention": "high",
+      "drainage": "moderate",
+      "suitable_crops": [
+        "grasses", "pasture crops", "wheat", "corn", "soybeans",
+        "vegetables with shallow roots", "perennial flowers"
+      ],
+      "amendments": [
+        {
+          "name": "Organic matter",
+          "purpose": "Improve soil structure and prevent compaction",
+          "application_rate": "2-3 inches annually",
+          "timing": "Fall or early spring"
+        },
+        {
+          "name": "Coarse sand",
+          "purpose": "Improve drainage and reduce compaction",
+          "application_rate": "1-2 inches mixed into top 6 inches",
+          "timing": "Fall preparation"
+        }
+      ],
+      "irrigation_guidance": {
+        "frequency": "Moderate watering frequency (2-3 times per week)",
+        "duration": "Medium duration sessions (25-35 minutes)",
+        "method": "Drip irrigation to prevent surface crusting",
+        "special_notes": "Avoid overwatering to prevent waterlogging. Use mulch to prevent surface crusting."
+      }
+    },
+    "peaty": {
+      "name": "Peaty",
+      "characteristics": [
+        "High organic matter content",
+        "Excellent water retention",
+        "Acidic pH (typically 3.5-5.5)",
+        "Dark, spongy texture",
+        "Rich in nutrients but may need pH adjustment"
+      ],
+      "water_retention": "very_high",
+      "drainage": "variable",
+      "suitable_crops": [
+        "blueberries", "cranberries", "azaleas", "rhododendrons",
+        "acid-loving plants", "some vegetables with pH adjustment"
+      ],
+      "amendments": [
+        {
+          "name": "Lime",
+          "purpose": "Raise pH for most crops",
+          "application_rate": "Follow soil test recommendations",
+          "timing": "Fall application, 3-6 months before planting"
+        },
+        {
+          "name": "Sand",
+          "purpose": "Improve drainage if waterlogged",
+          "application_rate": "2-3 inches mixed into top 8 inches",
+          "timing": "Fall or early spring"
+        }
+      ],
+      "irrigation_guidance": {
+        "frequency": "Monitor carefully, may retain too much water",
+        "duration": "Short sessions if needed (10-15 minutes)",
+        "method": "Ensure good drainage, avoid overwatering",
+        "special_notes": "May need drainage improvement. Excellent for acid-loving plants without amendments."
+      }
+    },
+    "chalky": {
+      "name": "Chalky",
+      "characteristics": [
+        "High calcium carbonate content",
+        "Alkaline pH (typically 7.5-8.5)",
+        "Free-draining, can be drought-prone",
+        "Often shallow over bedrock",
+        "Can be nutrient-poor in trace elements"
+      ],
+      "water_retention": "low",
+      "drainage": "excellent",
+      "suitable_crops": [
+        "lavender", "rosemary", "thyme", "cabbage family crops",
+        "spinach", "beets", "alkaline-tolerant plants"
+      ],
+      "amendments": [
+        {
+          "name": "Organic compost",
+          "purpose": "Improve water retention and add nutrients",
+          "application_rate": "3-4 inches annually",
+          "timing": "Spring and fall applications"
+        },
+        {
+          "name": "Sulfur",
+          "purpose": "Lower pH for acid-loving plants",
+          "application_rate": "Follow soil test recommendations",
+          "timing": "Fall application, allow time to work"
+        },
+        {
+          "name": "Iron chelate",
+          "purpose": "Address iron deficiency common in alkaline soils",
+          "application_rate": "Follow package directions",
+          "timing": "Spring application"
+        }
+      ],
+      "irrigation_guidance": {
+        "frequency": "Frequent watering needed (daily in hot weather)",
+        "duration": "Medium duration sessions (20-25 minutes)",
+        "method": "Drip irrigation or soaker hoses",
+        "special_notes": "Mulch heavily to retain moisture. May need frequent feeding due to nutrient leaching."
+      }
+    }
+  },
+  "compatibility_matrix": {
+    "rice": {
+      "sandy": { "score": 0.3, "warnings": ["Poor water retention for rice cultivation", "Requires frequent irrigation"] },
+      "clay": { "score": 0.9, "warnings": [] },
+      "loamy": { "score": 0.8, "warnings": [] },
+      "silty": { "score": 0.7, "warnings": ["Monitor drainage to prevent waterlogging"] },
+      "peaty": { "score": 0.6, "warnings": ["May need pH adjustment", "Ensure adequate drainage"] },
+      "chalky": { "score": 0.2, "warnings": ["Poor water retention", "Alkaline pH not ideal for rice"] }
+    },
+    "wheat": {
+      "sandy": { "score": 0.6, "warnings": ["May need frequent fertilization", "Ensure adequate water retention"] },
+      "clay": { "score": 0.8, "warnings": ["Ensure good drainage", "Avoid working when wet"] },
+      "loamy": { "score": 0.9, "warnings": [] },
+      "silty": { "score": 0.8, "warnings": ["Prevent soil compaction"] },
+      "peaty": { "score": 0.5, "warnings": ["May need pH adjustment", "Ensure good drainage"] },
+      "chalky": { "score": 0.7, "warnings": ["May need organic matter addition"] }
+    },
+    "corn": {
+      "sandy": { "score": 0.5, "warnings": ["Requires frequent watering and fertilization"] },
+      "clay": { "score": 0.7, "warnings": ["Ensure adequate drainage", "May be slow to warm in spring"] },
+      "loamy": { "score": 0.9, "warnings": [] },
+      "silty": { "score": 0.8, "warnings": ["Good fertility but watch for compaction"] },
+      "peaty": { "score": 0.6, "warnings": ["May need pH adjustment and drainage improvement"] },
+      "chalky": { "score": 0.4, "warnings": ["Poor water retention", "May need pH adjustment"] }
+    },
+    "tomatoes": {
+      "sandy": { "score": 0.6, "warnings": ["Needs frequent watering", "Add organic matter for better results"] },
+      "clay": { "score": 0.5, "warnings": ["Improve drainage", "May have disease issues in heavy clay"] },
+      "loamy": { "score": 0.9, "warnings": [] },
+      "silty": { "score": 0.7, "warnings": ["Ensure good drainage", "Avoid overwatering"] },
+      "peaty": { "score": 0.4, "warnings": ["Usually too acidic", "May need significant pH adjustment"] },
+      "chalky": { "score": 0.5, "warnings": ["Add organic matter", "May need iron supplementation"] }
+    },
+    "potatoes": {
+      "sandy": { "score": 0.8, "warnings": ["Excellent drainage prevents disease"] },
+      "clay": { "score": 0.4, "warnings": ["Poor drainage can cause rot", "Difficult to harvest"] },
+      "loamy": { "score": 0.9, "warnings": [] },
+      "silty": { "score": 0.6, "warnings": ["Ensure good drainage", "May be prone to scab in alkaline conditions"] },
+      "peaty": { "score": 0.7, "warnings": ["Good organic matter but may need pH adjustment"] },
+      "chalky": { "score": 0.3, "warnings": ["Alkaline conditions promote scab disease"] }
+    },
+    "carrots": {
+      "sandy": { "score": 0.9, "warnings": [] },
+      "clay": { "score": 0.3, "warnings": ["Heavy soil causes forked, stunted roots"] },
+      "loamy": { "score": 0.8, "warnings": ["Ensure soil is well-worked and stone-free"] },
+      "silty": { "score": 0.6, "warnings": ["May cause forking if compacted"] },
+      "peaty": { "score": 0.5, "warnings": ["May need pH adjustment", "Ensure good structure"] },
+      "chalky": { "score": 0.4, "warnings": ["May be too alkaline", "Add organic matter"] }
+    }
+  }
+}
