@@ -1,3 +1,4 @@
+
 import React, { useState } from "react";
 import { X, Mail, Lock, User, Eye, EyeOff } from "lucide-react";
 
@@ -194,3 +195,6 @@ const AuthModal: React.FC<AuthModalProps> = ({
 };
 
 export default AuthModal;
+
+
+
