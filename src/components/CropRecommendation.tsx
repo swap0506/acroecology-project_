@@ -79,7 +79,7 @@ const CropRecommendation: React.FC<CropRecommendationProps> = ({ cropData }) => 
 
   if (loading) {
     return (
-      <div className="p-4 text-center text-gray-600">
+      <div className="p-4 text-center text-gray-600 dark:text-gray-300">
         🔄 Predicting best crop...
       </div>
     );
@@ -87,7 +87,7 @@ const CropRecommendation: React.FC<CropRecommendationProps> = ({ cropData }) => 
 
   if (apiError || !apiResult) {
     return (
-      <div className="p-4 text-center text-red-600">
+      <div className="p-4 text-center text-red-600 dark:text-red-400">
         ❌ Could not fetch AI prediction. Showing no results.
         <br />
         <small>{apiError}</small>
@@ -98,10 +98,10 @@ const CropRecommendation: React.FC<CropRecommendationProps> = ({ cropData }) => 
   return (
     <div className="space-y-6">
       {/* Main Recommendation Card */}
-      <div className="bg-gradient-to-br from-green-50 to-emerald-50 rounded-2xl p-6 border border-green-200">
+      <div className="bg-gradient-to-br from-green-50 to-emerald-50 dark:from-green-900 dark:to-emerald-800 rounded-2xl p-6 border border-green-200 dark:border-green-700">
         <div className="text-center mb-6">
           <div className="text-6xl mb-4">🌾</div>
-          <h3 className="text-3xl font-bold text-gray-800 mb-2">
+          <h3 className="text-3xl font-bold text-gray-800 dark:text-white mb-2">
             {apiResult.crop}
           </h3>
           <div className="flex items-center justify-center space-x-2 mb-4">
@@ -109,18 +109,20 @@ const CropRecommendation: React.FC<CropRecommendationProps> = ({ cropData }) => 
               {Math.round(apiResult.top3[0].prob * 100)}% Match
             </div>
           </div>
-          <p className="text-gray-600 leading-relaxed">
+          <p className="text-gray-600 dark:text-gray-300 leading-relaxed">
             This crop is the top recommendation from our ML model based on your
             soil and climate data.
           </p>
         </div>
 
         {/* Top 3 predictions */}
-        <div className="bg-white rounded-lg p-4 border border-gray-200">
-          <h4 className="font-semibold mb-2">Top 3 Predictions</h4>
+        <div className="bg-white dark:bg-gray-800 rounded-lg p-4 border border-gray-200 dark:border-gray-700">
+          <h4 className="font-semibold mb-2 text-gray-800 dark:text-gray-200">
+            Top 3 Predictions
+          </h4>
           <ul className="space-y-1">
             {apiResult.top3.map((item, idx) => (
-              <li key={idx} className="flex justify-between">
+              <li key={idx} className="flex justify-between text-gray-700 dark:text-gray-300">
                 <span>{item.crop}</span>
                 <span>{Math.round(item.prob * 100)}%</span>
               </li>
@@ -130,12 +132,12 @@ const CropRecommendation: React.FC<CropRecommendationProps> = ({ cropData }) => 
       </div>
 
       {/* Growing Tips */}
-      <div className="bg-white rounded-2xl p-6 border border-gray-200">
-        <h4 className="text-xl font-bold text-gray-800 mb-4 flex items-center">
+      <div className="bg-white dark:bg-gray-800 rounded-2xl p-6 border border-gray-200 dark:border-gray-700">
+        <h4 className="text-xl font-bold text-gray-800 dark:text-gray-200 mb-4 flex items-center">
           <AlertTriangle className="text-orange-500 mr-2" size={24} />
           General Growing Tips
         </h4>
-        <p className="text-gray-700">
+        <p className="text-gray-700 dark:text-gray-300">
           Ensure proper irrigation, pest control, and nutrient management for
           optimal yields.
         </p>
