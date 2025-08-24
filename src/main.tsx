@@ -1,3 +1,10 @@
+
+import { StrictMode } from "react";
+import { createRoot } from "react-dom/client";
+import App from "./App.tsx";
+import { ThemeProvider } from "./ThemeContext"; // import here
+import "./index.css";
+
 import { StrictMode } from 'react';
 import { createRoot } from 'react-dom/client';
 import App from './App.tsx';
@@ -27,10 +34,17 @@ if (!PUBLISHABLE_KEY) {
   throw new Error('Missing Publishable Key');
 }
 
-createRoot(document.getElementById('root')!).render(
+
+createRoot(document.getElementById("root")!).render(
   <StrictMode>
+
+    <ThemeProvider>
+      <App />
+    </ThemeProvider>
+
     <ClerkProvider publishableKey={PUBLISHABLE_KEY}>
       <App />
     </ClerkProvider>
+
   </StrictMode>
 );
