@@ -1,16 +1,15 @@
 import React from 'react';
-import { TrendingUp, Leaf, Droplets, Sun, Calendar, MapPin, Award, Target } from 'lucide-react';
+import { TrendingUp, Leaf, Droplets, Sun, Calendar, MapPin, Award, Target, Bug } from 'lucide-react';
 import { useTheme } from "../ThemeContext";
-
 
 interface DashboardProps {
   user: { name: string; email: string } | null;
   predictionCount: number;
+  onNavigate?: (page: string) => void;
 }
 
-const Dashboard: React.FC<DashboardProps> = ({ user, predictionCount }) => {
+const Dashboard: React.FC<DashboardProps> = ({ user, predictionCount, onNavigate }) => {
   const { theme, toggleTheme } = useTheme();
-  
 
   const recentPredictions = [
     { crop: 'Rice', confidence: 92, date: '2025-01-15', location: 'Field A' },
@@ -28,46 +27,46 @@ const Dashboard: React.FC<DashboardProps> = ({ user, predictionCount }) => {
 
   return (
     <div className="min-h-screen bg-gray-50 dark:bg-gray-900 transition-colors duration-300">
-  <div className="max-w-7xl mx-auto px-4 py-8">
-    {/* Top bar with Theme Toggle */}
-    <div className="flex items-center justify-between mb-8">
-      <div>
-        <h1 className="text-3xl font-bold text-gray-900 dark:text-white mb-2">
-          Welcome back, {user?.name || 'Farmer'}! 👋
-        </h1>
-        <p className="text-gray-600 dark:text-gray-400">
-          Here's your agricultural dashboard overview
-        </p>
-      </div>
-      <button
-        onClick={toggleTheme}
-        className="px-4 py-2 rounded-lg 
-                   bg-gray-200 dark:bg-gray-700 
-                   text-gray-900 dark:text-gray-100 
-                   hover:bg-gray-300 dark:hover:bg-gray-600 
-                   hover:scale-105 transition"
-      >
-        {theme === 'light' ? '🌙 Dark Mode' : '☀️ Light Mode'}
-      </button>
-    </div>
-{/* Stats Grid */}
-<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-8">
-  <div className="bg-white dark:bg-gray-800 rounded-xl p-6 shadow-sm border border-gray-200 dark:border-gray-700 transition-colors duration-300">
-    <div className="flex items-center justify-between">
-      <div>
-        <p className="text-sm font-medium text-gray-600 dark:text-gray-400">
-          Total Predictions
-        </p>
-        <p className="text-2xl font-bold text-gray-900 dark:text-white">
-          {predictionCount}
-        </p>
-      </div>
-      <div className="bg-green-100 dark:bg-green-900 rounded-full p-3 transition-colors duration-300">
-        <TrendingUp className="text-green-600 dark:text-green-400" size={24} />
-      
-    </div>
-  </div>
-</div>
+      <div className="max-w-7xl mx-auto px-4 py-8">
+        {/* Top bar with Theme Toggle */}
+        <div className="flex items-center justify-between mb-8">
+          <div>
+            <h1 className="text-3xl font-bold text-gray-900 dark:text-white mb-2">
+              Welcome back, {user?.name || 'Farmer'}! 👋
+            </h1>
+            <p className="text-gray-600 dark:text-gray-400">
+              Here's your agricultural dashboard overview
+            </p>
+          </div>
+          <button
+            onClick={toggleTheme}
+            className="px-4 py-2 rounded-lg 
+                       bg-gray-200 dark:bg-gray-700 
+                       text-gray-900 dark:text-gray-100 
+                       hover:bg-gray-300 dark:hover:bg-gray-600 
+                       hover:scale-105 transition"
+          >
+            {theme === 'light' ? '🌙 Dark Mode' : '☀️ Light Mode'}
+          </button>
+        </div>
+
+        {/* Stats Grid */}
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-8">
+          <div className="bg-white dark:bg-gray-800 rounded-xl p-6 shadow-sm border border-gray-200 dark:border-gray-700 transition-colors duration-300">
+            <div className="flex items-center justify-between">
+              <div>
+                <p className="text-sm font-medium text-gray-600 dark:text-gray-400">
+                  Total Predictions
+                </p>
+                <p className="text-2xl font-bold text-gray-900 dark:text-white">
+                  {predictionCount}
+                </p>
+              </div>
+              <div className="bg-green-100 dark:bg-green-900 rounded-full p-3 transition-colors duration-300">
+                <TrendingUp className="text-green-600 dark:text-green-400" size={24} />
+              </div>
+            </div>
+          </div>
 
           <div className="bg-white dark:bg-gray-800 rounded-xl p-6 shadow-sm border border-gray-200 dark:border-gray-700">
             <div className="flex items-center justify-between">
@@ -184,14 +183,30 @@ const Dashboard: React.FC<DashboardProps> = ({ user, predictionCount }) => {
                 <h2 className="text-xl font-semibold text-gray-900 dark:text-white">Quick Actions</h2>
               </div>
               <div className="p-6 space-y-3">
-                <button className="w-full bg-green-500 hover:bg-green-600 text-white py-3 px-4 rounded-lg font-medium transition">
+                <button 
+                  onClick={() => onNavigate?.('prediction')}
+                  className="w-full bg-green-500 hover:bg-green-600 text-white py-3 px-4 rounded-lg font-medium transition"
+                >
                   New Prediction
                 </button>
-                <button className="w-full bg-blue-500 hover:bg-blue-600 text-white py-3 px-4 rounded-lg font-medium transition">
+                <button 
+                  onClick={() => onNavigate?.('pest-identification')}
+                  className="w-full bg-orange-500 hover:bg-orange-600 text-white py-3 px-4 rounded-lg font-medium transition flex items-center justify-center space-x-2"
+                >
+                  <Bug size={18} />
+                  <span>Identify Pests</span>
+                </button>
+                <button 
+                  onClick={() => onNavigate?.('analytics')}
+                  className="w-full bg-blue-500 hover:bg-blue-600 text-white py-3 px-4 rounded-lg font-medium transition"
+                >
                   View Analytics
                 </button>
-                <button className="w-full bg-purple-500 hover:bg-purple-600 text-white py-3 px-4 rounded-lg font-medium transition">
-                  Export Data
+                <button 
+                  onClick={() => onNavigate?.('settings')}
+                  className="w-full bg-purple-500 hover:bg-purple-600 text-white py-3 px-4 rounded-lg font-medium transition"
+                >
+                  Settings
                 </button>
               </div>
             </div>
