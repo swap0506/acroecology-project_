@@ -1,0 +1,354 @@
+{
+  "pests_diseases": {
+    "aphids": {
+      "name": "Aphids",
+      "scientific_name": "Aphidoidea",
+      "category": "pest",
+      "description": "Small, soft-bodied insects that feed on plant sap, causing damage to leaves and stems",
+      "symptoms": [
+        "Curled or yellowing leaves",
+        "Sticky honeydew on leaves and stems",
+        "Stunted plant growth",
+        "Visible clusters of small green, black, or white insects",
+        "Sooty mold growth on honeydew deposits"
+      ],
+      "images": [
+        "/images/pests/aphids_on_leaves.jpg",
+        "/images/pests/aphids_colony.jpg",
+        "/images/pests/aphids_damage.jpg"
+      ],
+      "treatments": [
+        {
+          "method": "organic",
+          "treatment": "Neem oil spray",
+          "application": "Mix 2 tablespoons per gallon of water, spray on affected areas",
+          "timing": "Early morning or evening every 3-5 days",
+          "safety_notes": "Safe for beneficial insects when dry, avoid spraying during bloom"
+        },
+        {
+          "method": "organic",
+          "treatment": "Insecticidal soap",
+          "application": "Spray directly on aphids, ensure good coverage",
+          "timing": "Repeat every 2-3 days until controlled",
+          "safety_notes": "Test on small area first, rinse edible crops before harvest"
+        },
+        {
+          "method": "chemical",
+          "treatment": "Imidacloprid-based insecticide",
+          "application": "Follow label instructions for dilution and application",
+          "timing": "Apply when pest pressure is high",
+          "safety_notes": "Wear protective equipment, avoid during bloom, toxic to bees"
+        }
+      ],
+      "prevention": [
+        "Encourage beneficial insects like ladybugs and lacewings",
+        "Remove weeds that harbor aphids",
+        "Use reflective mulch to deter aphids",
+        "Monitor plants regularly for early detection",
+        "Avoid over-fertilizing with nitrogen",
+        "Plant companion plants like marigolds and catnip"
+      ],
+      "affected_crops": ["tomatoes", "peppers", "lettuce", "roses", "beans", "cucumbers"]
+    },
+    "spider_mites": {
+      "name": "Spider Mites",
+      "scientific_name": "Tetranychidae",
+      "category": "pest",
+      "description": "Tiny arachnids that feed on plant cells, causing stippling and webbing on leaves",
+      "symptoms": [
+        "Fine stippling or speckling on leaves",
+        "Yellow or bronze discoloration of leaves",
+        "Fine webbing on leaves and stems",
+        "Leaves may drop prematurely",
+        "Tiny moving dots on leaf undersides"
+      ],
+      "images": [
+        "/images/pests/spider_mites_damage.jpg",
+        "/images/pests/spider_mites_webbing.jpg",
+        "/images/pests/spider_mites_closeup.jpg"
+      ],
+      "treatments": [
+        {
+          "method": "organic",
+          "treatment": "Predatory mites release",
+          "application": "Release beneficial mites according to supplier instructions",
+          "timing": "Early in infestation, maintain humidity",
+          "safety_notes": "Completely safe, avoid pesticides that harm beneficials"
+        },
+        {
+          "method": "organic",
+          "treatment": "Horticultural oil spray",
+          "application": "Spray thoroughly on all leaf surfaces",
+          "timing": "Every 7-10 days, avoid hot sunny conditions",
+          "safety_notes": "May cause leaf burn in high temperatures"
+        },
+        {
+          "method": "chemical",
+          "treatment": "Miticide (Abamectin)",
+          "application": "Follow label rates, ensure good coverage",
+          "timing": "Apply when mites are detected",
+          "safety_notes": "Rotate with different modes of action to prevent resistance"
+        }
+      ],
+      "prevention": [
+        "Maintain adequate humidity levels",
+        "Avoid dusty conditions",
+        "Regular water spraying to increase humidity",
+        "Remove heavily infested leaves",
+        "Avoid over-fertilizing with nitrogen",
+        "Quarantine new plants before introducing to garden"
+      ],
+      "affected_crops": ["tomatoes", "beans", "strawberries", "roses", "houseplants", "fruit trees"]
+    },
+    "powdery_mildew": {
+      "name": "Powdery Mildew",
+      "scientific_name": "Erysiphales",
+      "category": "disease",
+      "description": "Fungal disease that appears as white powdery spots on leaves and stems",
+      "symptoms": [
+        "White or gray powdery spots on leaves",
+        "Spots spread to cover entire leaf surface",
+        "Leaves may yellow and drop",
+        "Stunted growth and reduced yield",
+        "Distorted or curled leaves"
+      ],
+      "images": [
+        "/images/diseases/powdery_mildew_leaves.jpg",
+        "/images/diseases/powdery_mildew_severe.jpg",
+        "/images/diseases/powdery_mildew_early.jpg"
+      ],
+      "treatments": [
+        {
+          "method": "organic",
+          "treatment": "Baking soda spray",
+          "application": "1 teaspoon per quart water with drop of dish soap",
+          "timing": "Spray weekly, avoid during hot sunny periods",
+          "safety_notes": "Safe for edible crops, rinse before harvest"
+        },
+        {
+          "method": "organic",
+          "treatment": "Milk spray",
+          "application": "Mix 1 part milk with 10 parts water",
+          "timing": "Spray every 3-4 days in early morning",
+          "safety_notes": "Completely safe, may leave residue that washes off"
+        },
+        {
+          "method": "chemical",
+          "treatment": "Fungicide (Myclobutanil)",
+          "application": "Follow label instructions for concentration",
+          "timing": "Apply at first sign of disease",
+          "safety_notes": "Wear protective equipment, observe pre-harvest intervals"
+        }
+      ],
+      "prevention": [
+        "Ensure good air circulation around plants",
+        "Avoid overhead watering",
+        "Remove infected plant debris",
+        "Plant resistant varieties when available",
+        "Avoid crowding plants",
+        "Water at soil level rather than on leaves"
+      ],
+      "affected_crops": ["roses", "cucumbers", "squash", "grapes", "beans", "peas"]
+    },
+    "late_blight": {
+      "name": "Late Blight",
+      "scientific_name": "Phytophthora infestans",
+      "category": "disease",
+      "description": "Serious fungal-like disease that can quickly destroy tomato and potato crops",
+      "symptoms": [
+        "Dark brown or black spots on leaves",
+        "White fuzzy growth on leaf undersides",
+        "Brown streaks on stems",
+        "Dark spots on fruits",
+        "Rapid plant collapse in humid conditions"
+      ],
+      "images": [
+        "/images/diseases/late_blight_tomato.jpg",
+        "/images/diseases/late_blight_potato.jpg",
+        "/images/diseases/late_blight_fruit.jpg"
+      ],
+      "treatments": [
+        {
+          "method": "organic",
+          "treatment": "Copper-based fungicide",
+          "application": "Apply according to label instructions",
+          "timing": "Preventive applications before disease appears",
+          "safety_notes": "Can cause phytotoxicity, avoid copper buildup in soil"
+        },
+        {
+          "method": "cultural",
+          "treatment": "Remove infected plants immediately",
+          "application": "Destroy infected plant material, do not compost",
+          "timing": "As soon as symptoms are noticed",
+          "safety_notes": "Wear gloves, clean tools between plants"
+        },
+        {
+          "method": "chemical",
+          "treatment": "Systemic fungicide (Metalaxyl)",
+          "application": "Follow label rates and timing",
+          "timing": "Preventive applications in high-risk conditions",
+          "safety_notes": "Rotate with different fungicide classes"
+        }
+      ],
+      "prevention": [
+        "Plant certified disease-free seed potatoes",
+        "Ensure good air circulation",
+        "Avoid overhead irrigation",
+        "Remove volunteer potato plants",
+        "Rotate crops annually",
+        "Monitor weather conditions for disease-favorable periods"
+      ],
+      "affected_crops": ["tomatoes", "potatoes", "eggplant", "peppers"]
+    },
+    "whiteflies": {
+      "name": "Whiteflies",
+      "scientific_name": "Aleyrodidae",
+      "category": "pest",
+      "description": "Small white flying insects that feed on plant sap and transmit viral diseases",
+      "symptoms": [
+        "Tiny white flying insects when plant is disturbed",
+        "Yellow sticky honeydew on leaves",
+        "Yellowing and wilting of leaves",
+        "Stunted plant growth",
+        "Sooty mold on honeydew deposits"
+      ],
+      "images": [
+        "/images/pests/whiteflies_adults.jpg",
+        "/images/pests/whiteflies_eggs.jpg",
+        "/images/pests/whiteflies_damage.jpg"
+      ],
+      "treatments": [
+        {
+          "method": "organic",
+          "treatment": "Yellow sticky traps",
+          "application": "Place traps near affected plants",
+          "timing": "Monitor and replace when full",
+          "safety_notes": "Safe for environment, may catch beneficial insects"
+        },
+        {
+          "method": "organic",
+          "treatment": "Insecticidal soap",
+          "application": "Spray on leaf undersides where eggs are laid",
+          "timing": "Repeat every 3-4 days for 2 weeks",
+          "safety_notes": "Safe for most plants, test on small area first"
+        },
+        {
+          "method": "chemical",
+          "treatment": "Systemic insecticide (Imidacloprid)",
+          "application": "Soil drench or foliar spray per label",
+          "timing": "Apply when populations are building",
+          "safety_notes": "Toxic to bees, avoid during bloom"
+        }
+      ],
+      "prevention": [
+        "Use reflective mulch to confuse whiteflies",
+        "Remove weeds that serve as alternate hosts",
+        "Inspect new plants before bringing into garden",
+        "Use row covers on susceptible crops",
+        "Encourage beneficial insects like parasitic wasps",
+        "Maintain good garden hygiene"
+      ],
+      "affected_crops": ["tomatoes", "peppers", "eggplant", "cucumbers", "beans", "ornamentals"]
+    },
+    "bacterial_spot": {
+      "name": "Bacterial Spot",
+      "scientific_name": "Xanthomonas spp.",
+      "category": "disease",
+      "description": "Bacterial disease causing spots on leaves, stems, and fruits of solanaceous crops",
+      "symptoms": [
+        "Small dark spots with yellow halos on leaves",
+        "Spots may have greasy appearance",
+        "Fruit spots are raised and scabby",
+        "Severe defoliation in wet conditions",
+        "Reduced fruit quality and yield"
+      ],
+      "images": [
+        "/images/diseases/bacterial_spot_leaves.jpg",
+        "/images/diseases/bacterial_spot_fruit.jpg",
+        "/images/diseases/bacterial_spot_severe.jpg"
+      ],
+      "treatments": [
+        {
+          "method": "organic",
+          "treatment": "Copper-based bactericide",
+          "application": "Apply preventively according to label",
+          "timing": "Begin applications before disease appears",
+          "safety_notes": "May cause phytotoxicity in cool, wet conditions"
+        },
+        {
+          "method": "cultural",
+          "treatment": "Improve air circulation",
+          "application": "Prune lower branches, space plants properly",
+          "timing": "Throughout growing season",
+          "safety_notes": "Sanitize pruning tools between plants"
+        },
+        {
+          "method": "chemical",
+          "treatment": "Streptomycin antibiotic",
+          "application": "Follow label instructions carefully",
+          "timing": "Apply during cool, wet periods",
+          "safety_notes": "Use sparingly to prevent resistance development"
+        }
+      ],
+      "prevention": [
+        "Use certified disease-free seeds and transplants",
+        "Avoid overhead irrigation",
+        "Rotate crops with non-solanaceous plants",
+        "Remove infected plant debris",
+        "Avoid working with wet plants",
+        "Plant resistant varieties when available"
+      ],
+      "affected_crops": ["tomatoes", "peppers", "eggplant"]
+    },
+    "nutrient_deficiency_nitrogen": {
+      "name": "Nitrogen Deficiency",
+      "scientific_name": "N/A",
+      "category": "deficiency",
+      "description": "Lack of nitrogen causing yellowing of older leaves and stunted growth",
+      "symptoms": [
+        "Yellowing of older, lower leaves first",
+        "Stunted overall plant growth",
+        "Pale green coloration of entire plant",
+        "Reduced leaf size",
+        "Poor fruit/flower development"
+      ],
+      "images": [
+        "/images/deficiencies/nitrogen_deficiency_corn.jpg",
+        "/images/deficiencies/nitrogen_deficiency_tomato.jpg",
+        "/images/deficiencies/nitrogen_deficiency_general.jpg"
+      ],
+      "treatments": [
+        {
+          "method": "organic",
+          "treatment": "Compost or aged manure",
+          "application": "Apply 2-4 inches around plants, work into soil",
+          "timing": "Early season and mid-season applications",
+          "safety_notes": "Ensure manure is well-aged to avoid burning plants"
+        },
+        {
+          "method": "organic",
+          "treatment": "Fish emulsion fertilizer",
+          "application": "Dilute according to package instructions",
+          "timing": "Apply every 2-3 weeks during growing season",
+          "safety_notes": "Strong odor, apply in evening to reduce smell"
+        },
+        {
+          "method": "chemical",
+          "treatment": "Nitrogen fertilizer (21-0-0)",
+          "application": "Follow soil test recommendations",
+          "timing": "Split applications throughout growing season",
+          "safety_notes": "Avoid over-application which can burn plants"
+        }
+      ],
+      "prevention": [
+        "Regular soil testing to monitor nutrient levels",
+        "Add organic matter annually",
+        "Use cover crops to fix nitrogen",
+        "Proper crop rotation with legumes",
+        "Avoid excessive watering that leaches nutrients",
+        "Mulch to retain soil nutrients"
+      ],
+      "affected_crops": ["corn", "tomatoes", "leafy greens", "brassicas", "most vegetables"]
+    }
+  }
+}

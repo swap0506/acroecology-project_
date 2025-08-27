@@ -1,7 +1,20 @@
+import React, { useState } from "react";
+import {
+  Download,
+  Trash2,
+  Save,
+  User,
+  Bell,
+  Lock,
+  Sliders,
+  Database,
+} from "lucide-react";
 
-
-  import React, { useState } from "react";
-import { Download, Trash2, Save, User, Bell, Lock, Sliders, Database } from "lucide-react";
+interface SettingsProps {
+  user: { name: string; email: string } | null;
+  onUpdateUser: (userData: { name: string; email: string }) => void;
+  onNavigate?: (page: string) => void;
+}
 
 const tabs = [
   { id: "profile", label: "Profile", icon: User },
@@ -11,11 +24,11 @@ const tabs = [
   { id: "data", label: "Data", icon: Database },
 ];
 
-export default function Settings() {
+export default function Settings({ user, onUpdateUser, onNavigate }: SettingsProps) {
   const [activeTab, setActiveTab] = useState("profile");
   const [formData, setFormData] = useState({
-    name: "",
-    email: "",
+    name: user?.name || "",
+    email: user?.email || "",
     notifications: true,
     emailAlerts: false,
     language: "en",
@@ -24,7 +37,7 @@ export default function Settings() {
   });
 
   const handleSave = () => {
-    console.log("Saving:", formData);
+    onUpdateUser({ name: formData.name, email: formData.email });
     alert("Settings saved!");
   };
 
@@ -35,6 +48,7 @@ export default function Settings() {
   const handleDeleteAccount = () => {
     if (window.confirm("Are you sure? This action cannot be undone.")) {
       alert("Account deleted.");
+      onNavigate?.("home");
     }
   };
 
@@ -44,17 +58,185 @@ export default function Settings() {
         return (
           <div className="space-y-6">
             <div>
-              <label className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
-                Full Name
-              </label>
+              <label className="block text-sm font-medium mb-2">Full Name</label>
               <input
                 type="text"
                 value={formData.name}
                 onChange={(e) =>
                   setFormData({ ...formData, name: e.target.value })
                 }
-                className="w-full px-4 py-3 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-green-500 focus:border-transparent bg-white dark:bg-gray-800 text-gray-900 dark:text-gray-100"
+                className="w-full px-4 py-3 border rounded-lg"
                 placeholder="Enter your full name"
+              />
+            </div>
+            <div>
+              <label className="block text-sm font-medium mb-2">
+                Email Address
+              </label>
+              <input
+                type="email"
+                value={formData.email}
+                onChange={(e) =>
+                  setFormData({ ...formData, email: e.target.value })
+                }
+                className="w-full px-4 py-3 border rounded-lg"
+                placeholder="Enter your email"
+              />
+            </div>
+          </div>
+        );
+
+      case "notifications":
+        return (
+          <div className="space-y-6">
+            <div className="flex items-center justify-between">
+              <span>Push Notifications</span>
+              <input
+                type="checkbox"
+                checked={formData.notifications}
+                onChange={(e) =>
+                  setFormData({ ...formData, notifications: e.target.checked })
+                }
+              />
+            </div>
+            <div className="flex items-center justify-between">
+              <span>Email Alerts</span>
+              <input
+                type="checkbox"
+                checked={formData.emailAlerts}
+                onChange={(e) =>
+                  setFormData({ ...formData, emailAlerts: e.target.checked })
+                }
+              />
+            </div>
+          </div>
+        );
+
+      case "privacy":
+        return (
+          <div className="p-4 border rounded-lg bg-gray-100">
+            <p>Your data is encrypted and stored securely.</p>
+          </div>
+        );
+
+      case "preferences":
+        return (
+          <div className="space-y-6">
+            <div>
+              <label className="block text-sm font-medium mb-2">Language</label>
+              <select
+                value={formData.language}
+                onChange={(e) =>
+                  setFormData({ ...formData, language: e.target.value })
+                }
+                className="w-full px-4 py-3 border rounded-lg"
+              >
+                <option value="en">English</option>
+                <option value="es">Spanish</option>
+              </select>
+            </div>
+
+            <div>
+              <label className="block text-sm font-medium mb-2">Theme</label>
+              <select
+                value={formData.theme}
+                onChange={(e) => {
+                  setFormData({ ...formData, theme: e.target.value });
+                  document.documentElement.classList.toggle(
+                    "dark",
+                    e.target.value === "dark"
+                  );
+                }}
+                className="w-full px-4 py-3 border rounded-lg"
+              >
+                <option value="light">Light</option>
+                <option value="dark">Dark</option>
+              </select>
+            </div>
+          </div>
+        );
+
+      case "data":
+        return (
+          <div className="space-y-4">
+            <button
+              onClick={handleExportData}
+              className="w-full flex items-center justify-center space-x-2 bg-blue-600 text-white py-3 px-4 rounded-lg"
+            >
+              <Download size={18} />
+              <span>Export My Data</span>
+            </button>
+
+            <button
+              onClick={handleDeleteAccount}
+              className="w-full flex items-center justify-center space-x-2 bg-red-600 text-white py-3 px-4 rounded-lg"
+            >
+              <Trash2 size={18} />
+              <span>Delete Account</span>
+            </button>
+          </div>
+        );
+
+      default:
+        return null;
+    }
+  };
+
+  return (
+    <div className="min-h-screen bg-gray-50 dark:bg-gray-900">
+      <div className="max-w-6xl mx-auto px-4 py-8">
+        <h1 className="text-3xl font-bold mb-6">Settings</h1>
+
+        <div className="bg-white dark:bg-gray-800 rounded-xl shadow-sm border overflow-hidden">
+          <div className="flex">
+            {/* Sidebar */}
+            <div className="w-64 bg-gray-50 dark:bg-gray-900 border-r">
+              <nav className="p-4 space-y-2">
+                {tabs.map((tab) => {
+                  const Icon = tab.icon;
+                  return (
+                    <button
+                      key={tab.id}
+                      onClick={() => setActiveTab(tab.id)}
+                      className={`w-full flex items-center space-x-3 px-4 py-3 rounded-lg ${
+                        activeTab === tab.id
+                          ? "bg-green-100 text-green-700"
+                          : "text-gray-600 hover:bg-gray-100"
+                      }`}
+                    >
+                      <Icon size={18} />
+                      <span>{tab.label}</span>
+                    </button>
+                  );
+                })}
+              </nav>
+            </div>
+
+            {/* Content */}
+            <div className="flex-1 p-8">
+              <h2 className="text-2xl font-semibold mb-6">
+                {tabs.find((tab) => tab.id === activeTab)?.label}
+              </h2>
+
+              {renderTabContent()}
+
+              <div className="mt-8 pt-6 border-t">
+                <button
+                  onClick={handleSave}
+                  className="flex items-center space-x-2 bg-green-600 text-white px-6 py-3 rounded-lg"
+                >
+                  <Save size={18} />
+                  <span>Save Changes</span>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+}
+
               />
             </div>
             <div>
