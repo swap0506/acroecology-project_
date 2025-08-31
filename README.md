@@ -343,4 +343,4 @@ For support, please:
 
 ---
 
-**Built with ❤️ for sustainable agriculture and smart farming**
+**Built with ❤️ for sustainable agriculture and smart farming by Swapna K. and Deep Das**
