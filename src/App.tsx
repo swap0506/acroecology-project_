@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import { SignedIn, useUser } from '@clerk/clerk-react';
 import { Sprout, Bug } from 'lucide-react';
 import Dashboard from './components/Dashboard';
@@ -24,7 +24,7 @@ export interface CropData {
 
 const App = () => {
   const [currentPage, setCurrentPage] = useState('prediction');
-  const [predictionCount, setPredictionCount] = useState(0);
+  const [predictionCount] = useState(0);
   const { user } = useUser();
   const appUser = user ? { name: user.fullName || user.username || user.id, email: user.primaryEmailAddress?.emailAddress || '' } : null;
 
@@ -81,9 +81,7 @@ const App = () => {
       <h2 className="text-2xl font-bold mt-8 mb-2 text-green-700">Crop Selection Parameters</h2>
       <p className="text-gray-600 mb-4 text-center max-w-xl">Learn about each parameter and its ideal range before entering your values.</p>
       <CropParameterCards />
-      <ParameterInputForm onSubmit={(values) => {
-        // You can handle submission side effects here if needed
-      }} />
+  <ParameterInputForm />
     </div>
   );
 };
