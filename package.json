@@ -21,14 +21,14 @@
   "dependencies": {
     "@clerk/clerk-react": "^5.41.0",
     "axios": "^1.11.0",
+    "combined-stream": "^1.0.8",
+    "delayed-stream": "^1.0.0",
+    "dequal": "^2.0.3",
+    "has-symbols": "^1.1.0",
+    "has-tostringtag": "^1.0.2",
     "lucide-react": "^0.344.0",
     "react": "^18.3.1",
-    "react-dom": "^18.3.1",
-     "dequal": "^2.0.3",
-  "has-tostringtag": "^1.0.2",
-  "combined-stream": "^1.0.8",
-  "delayed-stream": "^1.0.0",
-  "has-symbols": "^1.1.0"
+    "react-dom": "^18.3.1"
   },
   "devDependencies": {
     "@eslint/js": "^9.9.1",
@@ -52,8 +52,5 @@
     "typescript-eslint": "^8.3.0",
     "vite": "^7.1.2",
     "vitest": "^1.0.4"
-
-    
-
   }
 }
