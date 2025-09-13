@@ -958,9 +958,7 @@ const App = () => {
         onLogin={handleLogin}
         onSignup={handleSignup}
       />
-    </>
-  );
-};
+    
 
 };
 
