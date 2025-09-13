@@ -952,14 +952,14 @@ const App = () => {
         </div>
         <GreenFooter />
       </div>
-      <AuthModal
+       <AuthModal
         isOpen={showAuthModal}
         onClose={() => setShowAuthModal(false)}
         onLogin={handleLogin}
         onSignup={handleSignup}
       />
-    
-
+    </>
+  );
 };
 
 export default App;
