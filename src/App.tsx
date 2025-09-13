@@ -346,8 +346,6 @@ const App = () => {
   const handleGoHome = () => {
     setShowPlantGrowth(false);
     setCurrentStep(-1);
-  };
-
     setCurrentPage('prediction');
     setShowFeedback(false);
     setIsTransitioning(false);
@@ -363,20 +361,15 @@ const App = () => {
     return (
       <SignedIn>
         {/* Header with navigation */}
-        <TranslucentHeader 
-          handleGoHome={handleGoHome} 
-          handleNavigation={handleNavigation} 
-          currentPage={currentPage} 
+        <TranslucentHeader
+          user={user}
+          predictionCount={predictionCount}
+          onNavigate={handleNavigation}
         />
 
-        {/* Dashboard */}
-        <Dashboard 
-          user={user} 
-          predictionCount={predictionCount} 
-          onNavigate={handleNavigation} 
-        />
+        {/* Add rest of your dashboard content here */}
 
-        {/* Floating quick-action buttons (from feature branch) */}
+        {/* Floating quick-action buttons */}
         <div className="fixed bottom-6 right-6 flex flex-col space-y-3">
           <button
             onClick={() => handleNavigation('pest-identification')}
@@ -397,7 +390,6 @@ const App = () => {
         {/* Footer */}
         <GreenFooter />
       </SignedIn>
-
     );
   }
 
@@ -727,7 +719,7 @@ const App = () => {
                     <div className="bg-purple-100 rounded-full p-3 w-16 h-16 mx-auto mb-3 flex items-center justify-center">
                       <Leaf className="text-purple-600" size={24} />
                     </div>
-                    <p className="text-2xl font-bold text-gray-800">95%</p>
+                    <p className="text-2xl font-bold text-gray-800">95%</</p>
                     <p className="text-gray-600">Success Rate</p>
                   </div>
                 </div>
