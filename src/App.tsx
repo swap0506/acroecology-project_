@@ -719,7 +719,7 @@ const App = () => {
                     <div className="bg-purple-100 rounded-full p-3 w-16 h-16 mx-auto mb-3 flex items-center justify-center">
                       <Leaf className="text-purple-600" size={24} />
                     </div>
-                    <p className="text-2xl font-bold text-gray-800">95%</</p>
+                    <p className="text-2xl font-bold text-gray-800">95%</p>
                     <p className="text-gray-600">Success Rate</p>
                   </div>
                 </div>
