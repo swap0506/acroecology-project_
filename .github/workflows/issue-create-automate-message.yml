@@ -25,3 +25,4 @@ jobs:
               body: commentBody
             });
             console.log('Comment added successfully.');
+            console.log('Comment added successfully.');
