@@ -1,13 +1,13 @@
 
 import { StrictMode } from "react";
-import { createRoot } from "react-dom/client";
+
 import App from "./App.tsx";
 import { ThemeProvider } from "./ThemeContext"; // import here
-import "./index.css";
 
-import { StrictMode } from 'react';
+
+
 import { createRoot } from 'react-dom/client';
-import App from './App.tsx';
+
 import './index.css';
 import { ClerkProvider } from '@clerk/clerk-react';
 

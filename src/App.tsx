@@ -346,8 +346,6 @@ const App = () => {
   const handleGoHome = () => {
     setShowPlantGrowth(false);
     setCurrentStep(-1);
-  };
-
     setCurrentPage('prediction');
     setShowFeedback(false);
     setIsTransitioning(false);
@@ -363,20 +361,15 @@ const App = () => {
     return (
       <SignedIn>
         {/* Header with navigation */}
-        <TranslucentHeader 
-          handleGoHome={handleGoHome} 
-          handleNavigation={handleNavigation} 
-          currentPage={currentPage} 
+        <TranslucentHeader
+          user={user}
+          predictionCount={predictionCount}
+          onNavigate={handleNavigation}
         />
 
-        {/* Dashboard */}
-        <Dashboard 
-          user={user} 
-          predictionCount={predictionCount} 
-          onNavigate={handleNavigation} 
-        />
+        {/* Add rest of your dashboard content here */}
 
-        {/* Floating quick-action buttons (from feature branch) */}
+        {/* Floating quick-action buttons */}
         <div className="fixed bottom-6 right-6 flex flex-col space-y-3">
           <button
             onClick={() => handleNavigation('pest-identification')}
@@ -397,7 +390,6 @@ const App = () => {
         {/* Footer */}
         <GreenFooter />
       </SignedIn>
-
     );
   }
 
@@ -960,7 +952,7 @@ const App = () => {
         </div>
         <GreenFooter />
       </div>
-      <AuthModal
+       <AuthModal
         isOpen={showAuthModal}
         onClose={() => setShowAuthModal(false)}
         onLogin={handleLogin}
@@ -968,8 +960,6 @@ const App = () => {
       />
     </>
   );
-};
-
 };
 
 export default App;
