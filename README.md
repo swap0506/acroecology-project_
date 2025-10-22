@@ -322,6 +322,17 @@ Access metrics in development mode through the browser console or performance mo
 - Update documentation for new features
 - Ensure mobile responsiveness
 
+
+## ✨ Contributors
+
+#### Thanks to all the wonderful contributors 💖
+
+<a href="https://github.com/swap0506/acroecology-project_/graphs/contributors">
+  <img src="https://contrib.rocks/image?repo=swap0506/acroecology-project_" />
+</a>
+
+#### See full list of contributor contribution [Contribution Graph](https://github.com/swap0506/acroecology-project_/graphs/contributors)  
+
 ## 📝 License
 
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
